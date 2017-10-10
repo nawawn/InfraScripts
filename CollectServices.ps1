@@ -23,5 +23,5 @@ foreach ($Node in $Servers) {
             Where-Object{($_.Status -eq "Running") -and ($_.StartType -eq "Automatic")} | 
             Sort-Object Name | Select-Object Name,Status,StartType | Export-Csv C:\temp\Services\$Node.csv -NoTypeInformation
     }
-    Else {Write-Output "$Node is Offline."}  
+    Else {Write-Output "$Node is Offline."} 
 }
