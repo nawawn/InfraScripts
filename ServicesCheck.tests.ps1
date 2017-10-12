@@ -11,9 +11,9 @@ Start-Transcript C:\Temp\Services\ServicesCheck.Log -Force
 
 $CsvPath= "C:\Temp\Services"
  
-Describe 'Service status check'{ 
-    Context 'Csv Files Check'{ 
-        $Files = (Get-ChildItem $CsvPath\*.csv) 
+Describe 'Service status check'{
+    $Files = (Get-ChildItem $CsvPath\*.csv)
+    Context 'Csv Files Check'{          
         Foreach($file in $Files){ 
             It "$file Size should be greater than 0KB"{ 
                 $file.length | Should BeGreaterThan 0 
