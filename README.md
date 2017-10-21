@@ -1,4 +1,4 @@
-# InfraScripts - Shared PowerShell Scripts for Infrastructure Stuff
+# Shared PowerShell Scripts for Infrastructure Stuff
 
 <strong>CollectServices.ps1</strong> </br>
 This script simply creates csv files which include details about services running on a server using the server name as a file name.
