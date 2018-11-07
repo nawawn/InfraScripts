@@ -13,3 +13,6 @@ This script queries all the servers in AD and extract AD info, installed program
 
 __New-SubFolder.ps1__
 This script creates a subfolder under all child folders of a given path.
+
+__Invoke-SqlQuery.ps1__
+This script queries the database and return the result. It is useful when you don't have the Invoke-SqlCmd available on your computer. 
