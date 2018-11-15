@@ -1,7 +1,7 @@
 ﻿#Requires -Version 5.0
 #Written by Naw Awn 20/06/2018
 
-function New-SubFolder
+function New-ChildSubFolder
 { 
     <#
 .Synopsis
@@ -9,9 +9,9 @@ function New-SubFolder
 .DESCRIPTION
    The script will create a new subfolder under all the child paths of a given main path.
 .EXAMPLE
-   New-SubFolder -MainPath "\\Server\SharedFolder\Services" -NewSubFolder "Contract"
+   New-ChildSubFolder -MainPath "\\Server\SharedFolder\Services" -NewSubFolder "Contract"
 .EXAMPLE
-   New-SubFolder -MainPath "C:\Temp" -NewSubFolder "Contact"
+   New-ChildSubFolder -MainPath "C:\Temp" -NewSubFolder "Contact"
 #>   
     Param
     (
