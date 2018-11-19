@@ -17,3 +17,6 @@ This script queries the database and return the result. It is useful when you do
 
 __Remove-PepperFlash.ps1__
 This script remove all the residues of Google Chrome Flash player (PPAPI) after a new version is installed. You may need to specify the acceptable version.
+
+__Get-PepperFlash.ps1__
+This script get all of the Pepper Flash installed on the computer.
