@@ -13,7 +13,9 @@ Param(
     [System.Version]$SustainedVer = "31.0.0.0"
 )
 
-New-Variable -Name UsersFolder -Value 'C:\Users' -Description "Constant Variable for Users folder" -Option ReadOnly
+If (!(Get-Variable -Name UsersFolder)){
+    New-Variable -Name UsersFolder -Value 'C:\Users' -Description "Constant Variable for Users folder" -Option ReadOnly
+}
 $AllUsersFolder = Get-ChildItem $UsersFolder | where{$_.BaseName -ne 'Public'}
 $PepperFlash = 'AppData\Local\Google\Chrome\User Data\PepperFlash'
 

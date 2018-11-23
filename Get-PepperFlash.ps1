@@ -20,7 +20,8 @@ $PepperFlash = 'AppData\Local\Google\Chrome\User Data\PepperFlash'
 Foreach ($Folder in $AllUsersFolder){
     $UserPepperFlash = Join-Path -Path $Folder.FullName -ChildPath $PepperFlash
     #Write-Output $UserPepperFlash
-    If (Test-Path -Path $UserPepperFlash){        
-        Get-ChildItem $UserPepperFlash      
+    Test-Path -Path $UserPepperFlash{
+        Get-ChildItem $UserPepperFlash
+        }      
     }    
 }
