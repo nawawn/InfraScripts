@@ -20,3 +20,6 @@ This script remove all the residues of Google Chrome Flash player (PPAPI) after 
 
 __Get-PepperFlash.ps1__
 This script get all of the Pepper Flash installed on the computer.
+
+__Remove-AdUserHomeDir.ps1__
+This script remove the Home Directory of a given AD User.
