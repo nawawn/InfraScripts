@@ -53,12 +53,12 @@ Function Remove-AdUserHomeDir{
         $Log.Status = $Null
     }
     
-    #return username,folderpath,status
+    #return name,folderpath,status
     return $Log
     
 <#
 .Synopsis
-   Remove Home directory for a given user
+   Remove Home directory for a given AD user
 .DESCRIPTION
    The cmdlet retrieves the HomeDirectory value from the AD User Properties and delete the home folder.
 .EXAMPLE
