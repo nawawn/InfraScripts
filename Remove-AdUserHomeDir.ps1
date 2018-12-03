@@ -31,20 +31,34 @@ Function Remove-AdUserHomeDir{
 
     $Log = New-Object RDLog
         
-    If (($null -ne $HomeDir) -and (Test-Path $HomeDir)){
-        Write-Verbose "Removing $HomeDir..."
-        Remove-Item -Path $HomeDir -Force -Confirm:$false -ErrorVariable ErrVar
-        $Log.UserName = $Name
-        $Log.FolderPath = $HomeDir
-        If ($ErrVar){ $Log.Status = $ErrVar.Exception}
-        Else {$Log.Status = "Deleted"}
+    If ($HomeDir){
+        If (Test-Path $HomeDir){
+            Write-Verbose "Removing $HomeDir..."
+            Remove-Item -Path $HomeDir -Force -Confirm:$false -ErrorVariable ErrVar
+            $Log.Name = $Name
+            $Log.FolderPath = $HomeDir
+            If ($ErrVar){ $Log.Status = $ErrVar.Exception}
+            Else {$Log.Status = "Deleted"}
+        }
+        
+        Else {
+            $Log.Name = $Name
+            $Log.FolderPath = $HomeDir
+            $Log.Status = "NotFound"            
+        }
+    }
+    Else {
+        $Log.Name = $Name
+        $Log.FolderPath = $Null
+        $Log.Status = $Null
     }
     
-    #return username,folderpath,status
+    #return name,folderpath,status
     return $Log
+    
 <#
 .Synopsis
-   Remove Home directory for a given user
+   Remove Home directory for a given AD user
 .DESCRIPTION
    The cmdlet retrieves the HomeDirectory value from the AD User Properties and delete the home folder.
 .EXAMPLE
