@@ -34,7 +34,7 @@ Function New-PSCredential{
     Param(
         [Parameter(Mandatory)][String]$UserName,
         [Parameter(Mandatory)][String]$EncryptedFilePath,
-        [Parameter(Mandatory)][String]$AESKeyPath        
+        [Parameter(Mandatory)][String]$AESKeyFilePath        
     )
     $EncryptedString = Get-Content $EncryptedFilePath
     $Key = Get-Content $AESKeyPath
