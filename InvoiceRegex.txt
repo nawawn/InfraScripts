@@ -1,1 +1,0 @@
-([Ii][nN][vV][oO][iI][cC][eE]([sS]*))|(([Ii][nN][vV][oO][iI][cC][eE]([sS]*))(\/|\s|\\)([Ss][Tt][Aa][Tt][Ee][Mm][Ee][Nn][Tt]([sS]*)))|([Ff][Ii][Nn][Aa][Ll](\s|())[Nn][oO][tT][iI][cC][eE])|([Tt][Aa][Xx](\s|())[Ii][nN][vV][oO][iI][cC][eE]([sS]*))
