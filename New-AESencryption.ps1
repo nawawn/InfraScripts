@@ -48,9 +48,10 @@ $PassFile = "$OutFilePath\Pass.txt"
 
 Get-RandomAESKey -Byte $Byte | Out-File "$OutFilePath\AES.key"
 New-EncryptedString -String $Password -Key (Get-Content "$OutFilePath\AES.key") | Out-File "$OutFilePath\Pass.txt"
-$Cred = New-PSCredential -UserName $UserName -EncryptedFilePath $PassFile -AESKeyPath $KeyFile
 
 If (Test-Path $KeyFile){ Write-Output "Key file is created in $KeyFile"}
 If (Test-Path $PassFile){Write-Output "Pass file is saved in $PassFile" }
 
+#When you need to create credential using those files
+$Cred = New-PSCredential -UserName $UserName -EncryptedFilePath $PassFile -AESKeyPath $KeyFile
 #endregion Controller
