@@ -26,3 +26,6 @@ This script remove the Home Directory of a given AD User.
 
 __New-AESencryption.ps1__
 This script can be used to generate AES key and encrypted password to store in a text file. These files can then be used to create PSCredential in your automation script.
+
+__Enter-Credential.ps1__
+This script continues to prompt the username and password, if they are incorrect.
