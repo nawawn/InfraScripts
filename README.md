@@ -16,10 +16,10 @@ __Invoke-SqlQuery.ps1__
 This script queries the database and return the result. It is useful when you don't have the Invoke-SqlCmd cmdlet available on your computer.
 
 __Remove-PepperFlash.ps1__
-This script remove all the residues of Google Chrome Flash player (PPAPI) after a new version is installed. You may need to specify the acceptable version.
+This script removes all the residues of Google Chrome Flash player (PPAPI) after a new version is installed. You may need to specify the acceptable version.
 
 __Get-PepperFlash.ps1__
-This script get all of the Pepper Flash installed on the computer.
+This script gets all of the Pepper Flash installed on the computer.
 
 __Remove-AdUserHomeDir.ps1__
 This script remove the Home Directory of a given AD User.
@@ -28,4 +28,7 @@ __New-AESencryption.ps1__
 This script can be used to generate AES key and encrypted password to store in a text file. These files can then be used to create PSCredential in your automation script.
 
 __Enter-Credential.ps1__
-This script continues to prompt the username and password, if they are incorrect.
+This script continues to prompt the username and password if they are incorrect.
+
+__New-Password.ps1__
+This interactive script continues to prompt for new password if they don't meet the password complexity and minimum lenght requirement.
