@@ -1,4 +1,8 @@
-﻿Write-Output "Interactive Script for creating a new password"
+﻿<#URL Reference for secure string to simple string: 
+https://social.technet.microsoft.com/wiki/contents/articles/4546.working-with-passwords-secure-strings-and-credentials-in-windows-powershell.aspx
+#>
+
+Write-Output "Interactive Script for creating a new password"
 
 [Int]$MinLength = 8
 [Bool]$HasMinlen = $false
@@ -27,8 +31,7 @@ Do {
     
     $SecureText = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($SecurePass))
     $ConfirmText = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($ConfirmPass))
-    
-    
+        
     If ($SecurePass.length -ge $MinLength) {
         $HasMinlen = $true
     }
