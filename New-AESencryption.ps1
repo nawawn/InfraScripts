@@ -37,7 +37,7 @@ Function New-PSCredential{
         [Parameter(Mandatory)][String]$AESKeyFilePath        
     )
     $EncryptedString = Get-Content $EncryptedFilePath
-    $Key = Get-Content $AESKeyPath
+    $Key = Get-Content $AESKeyFilePath
     Return (New-Object -TypeName System.Management.Automation.PSCredential($UserName,($EncryptedString | ConvertTo-SecureString -Key $Key)))
 }
 
