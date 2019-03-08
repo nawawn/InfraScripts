@@ -54,4 +54,6 @@ If (Test-Path $PassFile){Write-Output "Pass file is saved in $PassFile" }
 
 #When you need to create credential using those files
 $Cred = New-PSCredential -UserName $UserName -EncryptedFilePath $PassFile -AESKeyPath $KeyFile
+Return $Cred
+
 #endregion Controller
