@@ -6,8 +6,8 @@
 )
 
 Function Get-RandomAESKey{
-    # Key sizes - 128, 160, 192, 224, and 256 bits
-    # Key Sizes - 16, 20, 24, 28 and 32 bytes respectively
+    # Key sizes - 128, 192, and 256 bits
+    # Key Sizes - 16, 24, and 32 bytes respectively
     [OutputType([Byte[]])]
     Param(
         [ValidateNotNullOrEmpty()]
