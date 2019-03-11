@@ -32,3 +32,6 @@ This script continues to prompt the username and password if they are incorrect.
 
 __New-Password.ps1__
 This interactive script continues to prompt for new password if they don't meet the password complexity and minimum lenght requirement.
+
+__Test-Credential.ps1__
+This interactive script check if the given credential is authenticated successfully.
