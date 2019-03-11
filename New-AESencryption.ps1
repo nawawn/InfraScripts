@@ -6,8 +6,8 @@
 )
 
 Function Get-RandomAESKey{
-    # Key sizes - 128, 160, 192, 224, and 256 bits
-    # Key Sizes - 16, 20, 24, 28 and 32 bytes respectively
+    # Key sizes - 128, 192, and 256 bits
+    # Key Sizes - 16, 24, and 32 bytes respectively
     [OutputType([Byte[]])]
     Param(
         [ValidateNotNullOrEmpty()]
@@ -37,7 +37,7 @@ Function New-PSCredential{
         [Parameter(Mandatory)][String]$AESKeyFilePath        
     )
     $EncryptedString = Get-Content $EncryptedFilePath
-    $Key = Get-Content $AESKeyPath
+    $Key = Get-Content $AESKeyFilePath
     Return (New-Object -TypeName System.Management.Automation.PSCredential($UserName,($EncryptedString | ConvertTo-SecureString -Key $Key)))
 }
 
@@ -48,9 +48,12 @@ $PassFile = "$OutFilePath\Pass.txt"
 
 Get-RandomAESKey -Byte $Byte | Out-File "$OutFilePath\AES.key"
 New-EncryptedString -String $Password -Key (Get-Content "$OutFilePath\AES.key") | Out-File "$OutFilePath\Pass.txt"
-$Cred = New-PSCredential -UserName $UserName -EncryptedFilePath $PassFile -AESKeyPath $KeyFile
 
 If (Test-Path $KeyFile){ Write-Output "Key file is created in $KeyFile"}
 If (Test-Path $PassFile){Write-Output "Pass file is saved in $PassFile" }
+
+#When you need to create credential using those files
+$Cred = New-PSCredential -UserName $UserName -EncryptedFilePath $PassFile -AESKeyPath $KeyFile
+Return $Cred
 
 #endregion Controller
