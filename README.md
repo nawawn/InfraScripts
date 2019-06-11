@@ -35,3 +35,6 @@ This interactive script continues to prompt for new password if they don't meet 
 
 __Test-Credential.ps1__
 This interactive script check if the given credential is authenticated successfully.
+
+__Get-SPFolderItemReport.ps1__
+This script can generate the report with all folder and file list from a SharePoint site library.
