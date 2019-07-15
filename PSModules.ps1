@@ -19,6 +19,7 @@ Pester
 Posh-SSH
 PSSQLite
 PowerShellGet
+UniversalDashboard
 '@ -Split '\r\n'
 
 If ($Install){
