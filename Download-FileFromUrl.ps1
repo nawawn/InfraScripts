@@ -18,6 +18,7 @@ Function Download-File{
 #Add Your Url here on the next line
 $Urls = @'
 https://www.7-zip.org/a/7z1900-x64.msi
+https://download.sqlitebrowser.org/DB.Browser.for.SQLite-3.11.2-win64.msi
 https://github.com/git-for-windows/git/releases/download/v2.22.0.windows.1/Git-2.22.0-64-bit.exe
 '@ -split '\r\n'
 
