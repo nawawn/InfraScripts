@@ -39,3 +39,9 @@ This interactive script check if the given credential is authenticated successfu
 __Get-SPFolderItemReport.ps1__
 This script can generate the report with all folder and file list from a SharePoint site library.
 
+__Get-FolderReport.ps1__
+This script has three functions, Get-DirectoryReport, Out-RelativePath and Get-DirStructure.
+
+__Update-RegLegacySW.ps1__
+Registry fix work around to install legacy software when you have folder redirection turned on in your environment. This changes will be over written by the Group Policies when the machine restart.
+
