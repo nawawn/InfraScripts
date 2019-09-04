@@ -15,7 +15,7 @@ Function Set-OwnershipCheckin{
     }
 }
 #Site Collection Variable
-$SiteURL="http://ourfiles/bmteam/hr"
+$SiteURL="http://sharepoint/library/folder"
   
 #Get the Site Collection
 $Site = Get-SPSite $SiteURL
