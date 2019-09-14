@@ -41,8 +41,7 @@ Function Watch-Process{
         [ValidateNotNullorEmpty()]$Name,
         [AllowNull()][PSCredential]$Credential,  
         [Switch]$TeamAlert,
-        [Swtich]$EmailAlert
-          
+        [Swtich]$EmailAlert          
     )
     Begin{
         $Start = Get-Date
