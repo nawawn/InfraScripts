@@ -3,7 +3,7 @@
         [String]$Message
     )
     Begin{
-        $Uri = 'Paste your MS Team Uri here i.e. https://outlook.office.com/webhook/guid@guid/incomingwebhook/somemoreguid/'
+        $Uri = 'Paste your MS Team Uri here i.e. https://outlook.office.com/webhook/guid@guid/incomingwebhook/somemoreguid'
     }
     Process{
         $Body = @{
