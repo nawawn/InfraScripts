@@ -46,6 +46,10 @@ __Update-RegLegacySW.ps1__
 Registry fix work around to install legacy software when you have folder redirection turned on in your environment. This changes will be over written by the Group Policies when the machine restart.
 
 __Watch-Process.ps1__
-This script monitors a process and sends an email when it terminates.  
+This script monitors a process and sends an email when it terminates. 
+
+__Monitor-Process.ps1__
+This is an another implementation of the Watch-Process.ps1 script splitting into functions. This also includes an extra function to send an alert message to a MS Team channel. 
+ 
 
 
