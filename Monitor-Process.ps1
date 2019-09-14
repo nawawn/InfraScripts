@@ -25,7 +25,7 @@ Function Send-EmailAlert{
         $MailParam.Add('To',        "naw.awn@mydomain.com"   )
         $MailParam.Add('Subject',   "Process Status Alert"   )
         $MailParam.Add('Body',       $Message                )
-        $MailParam.Add('SmtpServer',"ExchangeServer"    )
+        $MailParam.Add('SmtpServer',"ExchangeServer"         )
         If ($Credential){ $MailParam.Add('Credential',$Credential) }
     }
     Process{
