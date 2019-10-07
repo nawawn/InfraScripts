@@ -35,9 +35,7 @@ Function Send-EmailAlert{
 
 Function Watch-Process{
     Param(
-        [Parameter(Mandatory, ValueFromPipeline, 
-            ValueFromPipelineByPropertyName,                    
-            Position=0)]        
+        [Parameter(ValueFromPipeline, ValueFromPipelineByPropertyName, Position=0)]        
         [ValidateNotNullorEmpty()]$Name,
         [AllowNull()][PSCredential]$Credential,  
         [Switch]$TeamAlert,
