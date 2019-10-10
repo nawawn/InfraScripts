@@ -23,11 +23,11 @@ Function Update-Registry{
         $RegPath  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders' 
         $UserName = $env:USERNAME               
         $DefaultValue = @{
-            'Desktop'     = "\\blm-fis-01\userdata\$UserName\MyDesktop"
-            'Favorites'   = "\\blm-fis-01\userdata\$UserName\MyDocuments\IEFavorites"
-            'My Pictures' = "\\blm-fis-01\userdata\$UserName\MyDocuments\My Pictures"
-            'My Video'    = "\\blm-fis-01\userdata\$UserName\MyDocuments\My Videos"
-            'Personal'    = "\\blm-fis-01\userdata\$UserName\MyDocuments"
+            'Desktop'     = "\\FileServer\userdata\$UserName\MyDesktop"
+            'Favorites'   = "\\FileServer\userdata\$UserName\MyDocuments\IEFavorites"
+            'My Pictures' = "\\FileServer\userdata\$UserName\MyDocuments\My Pictures"
+            'My Video'    = "\\FileServer\userdata\$UserName\MyDocuments\My Videos"
+            'Personal'    = "\\FileServer\userdata\$UserName\MyDocuments"
         }
         $UsrProfValue = @{
             'Desktop'     = '%USERPROFILE%\Desktop'
