@@ -1,4 +1,17 @@
-﻿Function Get-DirectoryReport{
+﻿Function Get-ChildItemCount{
+    Param($Path)
+    Process{
+        $TopFolders = Get-ChildItem -Path $Path -Directory
+        Foreach($Folder in $TopFolders){
+            [PsCustomObject]@{
+                Name = $Folder.BaseName
+                Count = (Get-ChildItem -Path $Folder -Recurse).Count
+            }  
+        }
+    }
+}
+
+Function Get-DirectoryReport{
     Param(
         [String]$Root
     )
