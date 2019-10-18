@@ -45,7 +45,6 @@ This script has three functions, Get-DirectoryReport, Out-RelativePath and Get-D
 __Update-RegLegacySW.ps1__
 Registry fix work around to install legacy software when you have folder redirection turned on in your environment. This changes will be over written by the Group Policies when the machine restart.
 
-__Watch-Process.ps1__
-This script monitors a process and sends an email when it terminates.  
-
-
+__Watch-Process.ps1__ 
+This script can monitor a process and sends an email and/or a message to a MS Team channel when it terminates.  
+ 
