@@ -48,3 +48,5 @@ Registry fix work around to install legacy software when you have folder redirec
 __Watch-Process.ps1__ 
 This script can monitor a process and sends an email and/or a message to a MS Team channel when it terminates.  
  
+__Get-ServicePsd1__ 
+This script the generates the running and stopped services in powershell data format output.
