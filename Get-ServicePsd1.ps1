@@ -13,7 +13,7 @@
         $ServiceList = (Get-Service -ComputerName $ComputerName) 
         [String]$Running = (($ServiceList.where{$_.Status -eq 'Running'}).Name) | %{"'"+ "$_" + "',"}
         [String]$Stopped = (($ServiceList.where{$_.Status -eq 'Stopped'}).Name) | %{"'"+ "$_" + "',"}
-        Write-Output "$Computername = @{"       
+        Write-Output "$("'"+ $Computername +"'") = @{"       
         Write-Output "`t Running = @{"
         Write-Output "`t`t Name = $((-Join $Running).TrimEnd(','))"
         Write-Output "`t}"
@@ -26,11 +26,13 @@
         Write-Output $end
     }
 <#
+.DESCRIPTION
+   Generate the report for services in a powershell data file format with running and stopped sections.
 .EXAMPLE
    Get-ServicePSD1 -ComputerName localhost
 .OUTPUTS
    @{
-	    SQLServer = @{
+	    'SQLServer' = @{
 		    Running = @{
 			    Name = 	'MSSQLSERVER','MsDtsServer100','SQLBrowser','SQLSERVERAGENT'	
 		    }
@@ -42,4 +44,3 @@
 #>
 }
 
-Get-ServicePSD1 -ComputerName localhost
