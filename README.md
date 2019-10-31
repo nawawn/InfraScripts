@@ -22,7 +22,7 @@ __Get-PepperFlash.ps1__
 This script gets all of the Pepper Flash installed on the computer.
 
 __Remove-AdUserHomeDir.ps1__
-This script remove the Home Directory of a given AD User.
+This script removes the Home Directory of a given AD User.
 
 __New-AESencryption.ps1__
 This script can be used to generate AES key and encrypted password to store in a text file. These files can then be used to create PSCredential in your automation script.
@@ -34,7 +34,7 @@ __New-Password.ps1__
 This interactive script continues to prompt for new password if they don't meet the password complexity and minimum lenght requirement.
 
 __Test-Credential.ps1__
-This interactive script check if the given credential is authenticated successfully.
+This interactive script checks if the given credential is authenticated successfully.
 
 __Get-SPFolderItemReport.ps1__
 This script can generate the report with all folder and file list from a SharePoint site library.
@@ -48,5 +48,8 @@ Registry fix work around to install legacy software when you have folder redirec
 __Watch-Process.ps1__ 
 This script can monitor a process and sends an email and/or a message to a MS Team channel when it terminates.  
  
-__Get-ServicePsd1__ 
-This script the generates the running and stopped services in powershell data format output.
+__Get-ServicePsd1.ps1__ 
+This script generates the running and stopped services in powershell configuration data format output.
+
+__Replace-Char.ps1__
+This script replaces a single character in a given string.
