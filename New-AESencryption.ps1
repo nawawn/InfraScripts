@@ -11,7 +11,7 @@ Function Get-RandomAESKey{
     [OutputType([Byte[]])]
     Param(
         [ValidateNotNullOrEmpty()]
-        [ValidateSet(16, 20, 24, 28, 32)]
+        [ValidateSet(16, 24, 32)]
         [int]$Byte = 16
     )
     $Key = New-Object System.Byte[] -ArgumentList $Byte
