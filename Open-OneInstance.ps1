@@ -12,12 +12,15 @@ Function Open-OneInstance{
     Process{
         try {
             [Void]$Mutex.WaitOne()
-            Start-Process @Param -Wait
+            $returnValue = Start-Process @Param -Wait -PassThru
         }
         finally {
             $Mutex.ReleaseMutex()
             $Mutex.Dispose()
         }
+    }
+    End{
+        [System.Environment]::ExitCode($returnValue.ExitCode)
     }
 <#
 .Synopsis
