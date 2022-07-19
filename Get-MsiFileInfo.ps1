@@ -24,6 +24,8 @@ Function Get-MsiFileInfo{
             $Value = $Record.GetType().InvokeMember('StringData', 'GetProperty', $null, $Record, 2)              
             $MsiValue.Add($Name, $Value)  
         }
+        $MsiValue.Add('FileName', $Path.Name)
+        $MsiValue.Add('FilePath', $Path.FullName)
         
         Write-Verbose "Commit database and close view"
         $MsiDb.GetType().InvokeMember('Commit', 'InvokeMethod', $null, $MsiDb, $null)
