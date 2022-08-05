@@ -46,7 +46,7 @@ Function Get-ADGroupReport{
 .Synopsis
    Generate the AD Group Report
 .DESCRIPTION
-   The cmdlet will extract the users, computers and groups from a given AD Group.
+   The cmdlet will extract the users, computers and groups from the given AD Group.
    The command only resolves the direct group member within the given group. It does not resolve recursively.
    The cmdlet can take the Domain Name or the Server Name to execute the query from.
 .EXAMPLE
